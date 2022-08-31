@@ -1,0 +1,32 @@
+{
+    "name": "ExtractInundationCensusTracts Data Processor",
+    "container": "extractinundationcensustracts-processor",
+    "pre_processing_stage": "python3 create_processor_yml.py",
+    "execution_stage": "./main.sh",
+    "slurm_input_rules": {
+
+           "time": {
+                "max": 2,
+                "min": 1,
+                "default_value": 1,
+                "step": 1,
+                "unit": "Hours"
+            },
+            "memory_per_cpu": {
+                "max": 2000,
+                "min": 1000,
+                "default_value": 1000,
+                "step": 200,
+                "unit": "MB"
+            }
+    },
+    "param_rules": {
+        "floodmap_path": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "n/a"
+        }
+    },
+    "supported_hpc": ["anvil_community"],
+    "default_hpc": "anvil_community"
+}
