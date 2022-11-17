@@ -27,15 +27,20 @@
             }
     },
     "param_rules": {
-        "floodmap_path": {
+        "load_condition": {
             "type": "string_input",
             "require": true,
-            "default_value": "n/a"
+            "default_value": "TAS"
         },
-        "version": {
+        "breach_condition": {
             "type": "string_input",
             "require": true,
-            "default_value": "1"
+            "default_value": "Breach"
+        },
+        "dam_ids": {
+            "type": "string_input",
+            "require": true,
+            "default_value": "N/A"
         }
     },
     "supported_hpc": ["anvil_community"],
