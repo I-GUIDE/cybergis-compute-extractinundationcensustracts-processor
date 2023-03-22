@@ -25,11 +25,6 @@
             "type": "string_input",
             "require": true,
             "default_value": "n/a"
-        },
-        "version": {
-            "type": "string_input",
-            "require": true,
-            "default_value": "1"
         }
     },
     "supported_hpc": ["anvil_community"],
