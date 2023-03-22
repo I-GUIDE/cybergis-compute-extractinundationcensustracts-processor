@@ -4,10 +4,8 @@ import yaml
 import os
 
 processor_dict = {'$1': {'ExtractInundationCensusTracts':
-                              {'breach_condition': os.environ['breach_condition'],
-                               'load_condition': os.environ['load_condition'],
-                               'floodmap_path': '/compute_shared/Aging_Dams/inundation_maps/NID_FIM_'+os.environ['param_load_condition']+'_'+os.environ['param_breach_condition'],
-                               'dam_ids': os.environ['param_dam_ids']}}}
+                              {'floodmap_path': '/compute_shared/'+os.environ['param_floodmap_path'],
+                               'version': os.environ['param_version']}}}
 
 with open('/job/executable/extractinundationcensustracts.yml','w') as procfile:
     yaml.dump(processor_dict,procfile)
